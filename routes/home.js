@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Home page
 router.get('/', (req, res) => {
-    res.render('home/index', {
+    res.render('Home/index', {
         title: 'Home - Allen Pandey',
         page: 'home'
     });

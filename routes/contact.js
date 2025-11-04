@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
         ? 'Thank you for your message! I\'ll get back to you soon.' 
         : null;
     
-    res.render('contact/index', {
+    res.render('Contact/index', {
         title: 'Contact - Allen Pandey',
         page: 'contact',
         successMessage: successMessage,
@@ -37,7 +37,7 @@ router.post('/', contactValidation, (req, res) => {
     
     if (!errors.isEmpty()) {
         // Return form with errors
-        return res.render('contact/index', {
+        return res.render('Contact/index', {
             title: 'Contact - Allen Pandey',
             page: 'contact',
             successMessage: null,

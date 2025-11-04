@@ -3,7 +3,7 @@ const router = express.Router();
 
 // About page
 router.get('/', (req, res) => {
-    res.render('about/index', {
+    res.render('About/index', {
         title: 'About - Allen Pandey',
         page: 'about'
     });

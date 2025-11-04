@@ -37,7 +37,7 @@ const projects = [
 
 // Projects page
 router.get('/', (req, res) => {
-    res.render('projects/index', {
+    res.render('Projects/index', {
         title: 'Projects - Allen Pandey',
         page: 'projects',
         projects: projects
