@@ -1,6 +1,6 @@
 # Allen Pandey - Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with ASP.NET Core MVC, showcasing projects, skills, and experience.
+A modern, responsive personal portfolio website built with Node.js and Express, showcasing projects, skills, and experience.
 
 ## 🚀 Features
 
@@ -14,30 +14,33 @@ A modern, responsive personal portfolio website built with ASP.NET Core MVC, sho
 
 ## 🛠️ Technologies Used
 
-- **ASP.NET Core 8.0** (MVC)
-- **C#** (Latest version)
+- **Node.js** (Runtime)
+- **Express.js** (Web Framework)
+- **EJS** (Templating Engine)
 - **Bootstrap 5.3.2** (UI Framework)
 - **Bootstrap Icons** (Icons)
-- **jQuery** (Form validation)
+- **express-validator** (Form Validation)
 - **HTML5 & CSS3**
 
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later
-- A code editor (Visual Studio, Visual Studio Code, or JetBrains Rider)
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
+- [npm](https://www.npmjs.com/) (v9.0.0 or higher) - comes with Node.js
+- A code editor (Visual Studio Code, WebStorm, etc.)
 - Git (optional, for version control)
 
 ## 🏃 Running Locally
 
-### Step 1: Install .NET SDK
+### Step 1: Install Node.js
 
-Download and install the .NET 8.0 SDK from [Microsoft's official website](https://dotnet.microsoft.com/download/dotnet/8.0).
+Download and install Node.js from [nodejs.org](https://nodejs.org/).
 
 Verify installation:
 ```bash
-dotnet --version
+node --version
+npm --version
 ```
 
 ### Step 2: Clone or Navigate to Project Directory
@@ -50,127 +53,105 @@ cd Profile
 
 Or simply navigate to the project directory if you already have it.
 
-### Step 3: Restore Dependencies
+### Step 3: Install Dependencies
 
 ```bash
-dotnet restore
+npm install
 ```
 
 ### Step 4: Run the Application
 
+**Development mode** (with auto-reload):
 ```bash
-dotnet run
+npm run dev
 ```
 
-The application will start and you should see output like:
+**Production mode**:
+```bash
+npm start
 ```
-Now listening on: https://localhost:5001
-Now listening on: http://localhost:5000
+
+The application will start and you should see:
+```
+Server is running on port 3000
+Visit http://localhost:3000
 ```
 
 ### Step 5: Open in Browser
 
 Open your browser and navigate to:
-- **HTTPS**: `https://localhost:5001`
-- **HTTP**: `http://localhost:5000`
+- **http://localhost:3000**
 
 ## 🎨 Customization Guide
 
 ### Updating Personal Information
 
-1. **Home Page Bio**: Edit `Views/Home/Index.cshtml`
-2. **Photo Placeholder**: Replace the placeholder image URL in `Views/Home/Index.cshtml` with your actual photo URL
-3. **About Page**: Update education, experience, and skills in `Views/About/Index.cshtml`
-4. **Projects**: Modify project data in `Controllers/ProjectsController.cs`
-5. **Contact Links**: Update email, GitHub, and LinkedIn links in `Views/Contact/Index.cshtml`
+1. **Home Page Bio**: Edit `views/home/index.ejs`
+2. **Photo Placeholder**: Replace the placeholder image URL in `views/home/index.ejs` with your actual photo URL
+3. **About Page**: Update education, experience, and skills in `views/about/index.ejs`
+4. **Projects**: Modify project data in `routes/projects.js`
+5. **Contact Links**: Update email, GitHub, and LinkedIn links in `views/contact/index.ejs`
 
 ### Changing Colors
 
 The site uses Bootstrap 5's primary blue color scheme. To change colors:
 
-1. Edit `wwwroot/css/site.css` and modify the color values
+1. Edit `public/css/site.css` and modify the color values
 2. Update Bootstrap color classes in the views (e.g., `bg-primary`, `text-primary`)
 
 ### Adding More Projects
 
-Edit `Controllers/ProjectsController.cs` and add more `Project` objects to the list:
+Edit `routes/projects.js` and add more project objects to the array:
 
-```csharp
-new Project
+```javascript
 {
-    Id = 5,
-    Title = "Your Project Title",
-    Description = "Project description here...",
-    Technologies = "ASP.NET Core, C#, Bootstrap",
-    GitHubUrl = "https://github.com/yourusername/project",
-    LiveUrl = "https://your-live-url.com" // Optional
+    id: 5,
+    title: 'Your Project Title',
+    description: 'Project description here...',
+    technologies: 'Node.js, Express, Bootstrap',
+    githubUrl: 'https://github.com/yourusername/project',
+    liveUrl: 'https://your-live-url.com' // Optional
 }
 ```
 
 ## 📧 Contact Form Configuration
 
-The contact form currently logs submissions. To enable email sending:
+The contact form currently logs submissions to the console. To enable email sending:
 
-1. Install an email service package (e.g., SendGrid, SMTP, or Azure Communication Services)
-2. Configure email settings in `appsettings.json`
-3. Implement email sending logic in `Controllers/ContactController.cs` (see the TODO comment)
+1. Install an email service package (e.g., Nodemailer, SendGrid, or Resend)
+2. Configure email settings in `.env` file
+3. Implement email sending logic in `routes/contact.js` (see the TODO comment)
 
-### Example with SendGrid:
+### Example with Nodemailer:
 
 ```bash
-dotnet add package SendGrid
+npm install nodemailer
 ```
 
-Then implement in `ContactController.cs`:
-
-```csharp
-// Add email service injection and implementation
+Then implement in `routes/contact.js`:
+```javascript
+const nodemailer = require('nodemailer');
+// Add email service configuration and implementation
 ```
 
 ## 🚢 Deployment Instructions
 
 > 💡 **Using GitHub?** See [GITHUB_HOSTING.md](GITHUB_HOSTING.md) for GitHub Actions deployment and hosting options!
 
-### Deploying to Azure
-
-1. **Create Azure Web App**:
-   - Go to [Azure Portal](https://portal.azure.com)
-   - Create a new Web App (App Service)
-   - Choose .NET 8.0 runtime stack
-
-2. **Publish the Application**:
-   ```bash
-   dotnet publish -c Release -o ./publish
-   ```
-
-3. **Deploy via Azure CLI**:
-   ```bash
-   az webapp deploy --resource-group <resource-group-name> --name <app-name> --src-path ./publish
-   ```
-
-4. **Or Use Visual Studio**:
-   - Right-click project → Publish
-   - Select Azure → Azure App Service
-   - Follow the wizard
-
-5. **Configure Custom Domain**:
-   - In Azure Portal → App Service → Custom domains
-   - Add `allenpandey.com` and `www.allenpandey.com`
-   - Follow Azure's DNS configuration instructions
-   - See [DNS_SETUP.md](DNS_SETUP.md) for detailed DNS setup
-
 ### Deploying to Render
 
 1. **Create a Render Account**: Sign up at [render.com](https://render.com)
 
 2. **Create New Web Service**:
-   - Connect your GitHub repository (or use Render's Git integration)
-   - Build Command: `dotnet publish -c Release -o ./publish`
-   - Start Command: `dotnet Profile.dll`
-   - Environment: `.NET`
+   - Connect your GitHub repository
+   - **Environment**: Select `Node`
+   - **Build Command**: `npm install`
+   - **Start Command**: `npm start`
+   - Instance Type: Choose free tier
 
 3. **Configure Environment Variables** (if needed):
-   - `ASPNETCORE_ENVIRONMENT`: `Production`
+   - `NODE_ENV`: `production`
+   - `PORT`: (Render sets this automatically)
 
 4. **Configure Custom Domain**:
    - In Render Dashboard → Settings → Custom Domains
@@ -183,9 +164,10 @@ Then implement in `ContactController.cs`:
 ### Deploying to Other Platforms
 
 The application can be deployed to:
-- **IIS** (Windows Server)
-- **Linux** (using Kestrel or behind a reverse proxy like Nginx)
-- **Docker** (create a Dockerfile and deploy to any container platform)
+- **Heroku** (Easy Node.js deployment)
+- **Vercel** (Serverless functions)
+- **Railway** (Simple deployment)
+- **DigitalOcean App Platform**
 - **AWS Elastic Beanstalk**
 - **Google Cloud Platform**
 
@@ -193,55 +175,51 @@ The application can be deployed to:
 
 ```
 Profile/
-├── Controllers/          # MVC Controllers
-│   ├── HomeController.cs
-│   ├── AboutController.cs
-│   ├── ProjectsController.cs
-│   └── ContactController.cs
-├── Models/              # Data Models
-│   ├── ContactViewModel.cs
-│   └── Project.cs
-├── Views/               # Razor Views
-│   ├── Home/
-│   ├── About/
-│   ├── Projects/
-│   ├── Contact/
-│   └── Shared/
-├── wwwroot/            # Static Files
+├── routes/              # Express Routes
+│   ├── home.js
+│   ├── about.js
+│   ├── projects.js
+│   └── contact.js
+├── views/               # EJS Templates
+│   ├── layout.ejs
+│   ├── home/
+│   │   └── index.ejs
+│   ├── about/
+│   │   └── index.ejs
+│   ├── projects/
+│   │   └── index.ejs
+│   ├── contact/
+│   │   └── index.ejs
+│   └── error.ejs
+├── public/             # Static Files
 │   ├── css/
 │   │   └── site.css
 │   └── js/
 │       └── site.js
-├── Properties/
-│   └── launchSettings.json
-├── Program.cs          # Application Entry Point
-├── appsettings.json    # Configuration
-└── Profile.csproj      # Project File
+├── server.js          # Application Entry Point
+├── package.json       # Dependencies
+└── .env              # Environment Variables (create this)
 ```
 
 ## 🔧 Configuration Files
 
-- **appsettings.json**: Application configuration
-- **Properties/launchSettings.json**: Development server settings
-- **Profile.csproj**: Project dependencies and settings
+- **package.json**: Project dependencies and scripts
+- **server.js**: Express server configuration
+- **.env**: Environment variables (create this file)
 
 ## 🐛 Troubleshooting
 
-### Issue: `dotnet: command not found`
-**Solution**: Ensure .NET SDK is installed and added to your PATH.
+### Issue: `node: command not found`
+**Solution**: Ensure Node.js is installed and added to your PATH.
 
 ### Issue: Port already in use
-**Solution**: Change the port in `Properties/launchSettings.json` or stop the process using the port.
+**Solution**: Change the PORT in `.env` file or stop the process using the port.
 
 ### Issue: CSS/JS not loading
-**Solution**: Ensure `wwwroot` folder is included in the project and `UseStaticFiles()` is called in `Program.cs`.
+**Solution**: Ensure `public` folder exists and `express.static()` is configured in `server.js`.
 
 ### Issue: Contact form not submitting
-**Solution**: Ensure jQuery validation scripts are loaded (check `_ValidationScriptsPartial.cshtml`).
-
-## 📝 License
-
-This project is open source and available for personal use. Feel free to customize it for your own portfolio.
+**Solution**: Check that form validation is working. Check server logs for errors.
 
 ## 🌐 Domain Configuration
 
@@ -250,10 +228,14 @@ This portfolio is configured for **allenpandey.com**.
 📖 **See [DNS_SETUP.md](DNS_SETUP.md) for detailed DNS configuration instructions.**
 
 Quick steps:
-1. Deploy your application to a hosting provider (Azure, Render, etc.)
+1. Deploy your application to a hosting provider (Render, Heroku, etc.)
 2. Configure DNS records to point `allenpandey.com` to your hosting provider
 3. Enable SSL/HTTPS (usually automatic)
 4. Wait 24-48 hours for DNS propagation
+
+## 📝 License
+
+This project is open source and available for personal use. Feel free to customize it for your own portfolio.
 
 ## 👤 Author
 
@@ -266,7 +248,7 @@ Quick steps:
 ## 🙏 Acknowledgments
 
 - Bootstrap team for the amazing UI framework
-- Microsoft for ASP.NET Core
+- Express.js team for the excellent web framework
 - Bootstrap Icons for the icon set
 
 ---
