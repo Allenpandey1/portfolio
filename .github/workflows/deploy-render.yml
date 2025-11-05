@@ -1,5 +1,11 @@
 # GitHub Actions workflow for deploying to Render
-# This workflow triggers Render to deploy when code is pushed to main branch
+# 
+# REQUIRED SECRETS (set in GitHub repository settings):
+# - RENDER_SERVICE_ID: Your Render service ID (found in Render dashboard)
+# - RENDER_API_KEY: Your Render API key (found in Render account settings)
+#
+# NOTE: Render auto-deploys on git push if connected to GitHub.
+# This workflow is optional and can trigger manual deploys.
 
 name: Deploy to Render
 
@@ -13,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
       - name: Trigger Render Deploy
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:

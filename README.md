@@ -134,44 +134,58 @@ const nodemailer = require('nodemailer');
 // Add email service configuration and implementation
 ```
 
-## 🚢 Deployment Instructions
+## 🚀 Deployment
 
-> 💡 **Using GitHub?** See [GITHUB_HOSTING.md](GITHUB_HOSTING.md) for GitHub Actions deployment and hosting options!
+### Deploy to Render
 
-### Deploying to Render
+1. **Create a Render Account**:
+   - Go to [render.com](https://render.com)
+   - Sign up for a free account
 
-1. **Create a Render Account**: Sign up at [render.com](https://render.com)
-
-2. **Create New Web Service**:
+2. **Create a New Web Service**:
+   - Click "New +" → "Web Service"
    - Connect your GitHub repository
-   - **Environment**: Select `Node`
+   - Or manually deploy from the repository
+
+3. **Configure Settings**:
+   - **Name**: `allen-pandey-portfolio` (or your choice)
+   - **Environment**: `Node`
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
-   - Instance Type: Choose free tier
+   - **Instance Type**: Free (or paid for better performance)
 
-3. **Configure Environment Variables** (if needed):
-   - `NODE_ENV`: `production`
-   - `PORT`: (Render sets this automatically)
+4. **Environment Variables** (optional):
+   - `NODE_ENV=production`
+   - `PORT` (usually set automatically by Render)
 
-4. **Configure Custom Domain**:
-   - In Render Dashboard → Settings → Custom Domains
-   - Add `allenpandey.com` and `www.allenpandey.com`
-   - Update DNS records as instructed by Render
-   - See [DNS_SETUP.md](DNS_SETUP.md) for detailed DNS setup
+5. **Deploy**:
+   - Click "Create Web Service"
+   - Render will automatically deploy your app
 
-5. **Deploy**: Render will automatically deploy on each push to your repository
+See [RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md) for detailed instructions.
 
-### Deploying to Other Platforms
+### GitHub Actions (Optional)
 
-The application can be deployed to:
-- **Heroku** (Easy Node.js deployment)
-- **Vercel** (Serverless functions)
-- **Railway** (Simple deployment)
-- **DigitalOcean App Platform**
-- **AWS Elastic Beanstalk**
-- **Google Cloud Platform**
+The repository includes GitHub Actions workflows for automated deployment:
 
-## 📁 Project Structure
+#### Render Deployment Workflow
+- **File**: `.github/workflows/deploy-render.yml`
+- **Required Secrets**:
+  - `RENDER_SERVICE_ID`: Your Render service ID
+  - `RENDER_API_KEY`: Your Render API key
+- **Note**: Render auto-deploys on push if connected to GitHub, so this is optional
+
+#### Azure Deployment Workflow (Optional)
+- **File**: `.github/workflows/deploy-azure.yml`
+- **Required Secrets**:
+  - `AZURE_WEBAPP_PUBLISH_PROFILE`: Azure publish profile
+- **To Disable**: If you're not using Azure, you can:
+  1. Delete `.github/workflows/deploy-azure.yml`, OR
+  2. Rename it to `deploy-azure.yml.disabled`
+
+**To disable Azure workflow**: Simply delete or rename the `.github/workflows/deploy-azure.yml` file if you're only using Render.
+
+## �� Project Structure
 
 ```
 Profile/
