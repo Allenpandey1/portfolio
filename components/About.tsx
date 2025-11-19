@@ -119,7 +119,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-section px-6 lg:px-8 bg-[#f8fafc]">
+    <section id="about" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fefefe] via-[#f8f9fa] to-[#fefefe]">
       <div className="max-w-6xl mx-auto">
         {/* Introduction */}
         <motion.div
