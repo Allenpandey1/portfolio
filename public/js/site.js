@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offsetTop = target.offsetTop - 80;
+                const offsetTop = target.offsetTop - 150; // Account for banner + navbar
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'

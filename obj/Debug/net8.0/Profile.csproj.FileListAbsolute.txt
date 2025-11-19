@@ -28,3 +28,4 @@
 /Users/allen/Desktop/Profile/obj/Debug/net8.0/ref/Profile.dll
 /Users/allen/Desktop/Profile/obj/Debug/net8.0/Profile.sourcelink.json
 /Users/allen/Desktop/Profile/bin/Debug/net8.0/package.json
+/Users/allen/Desktop/Profile/bin/Debug/net8.0/package-lock.json
