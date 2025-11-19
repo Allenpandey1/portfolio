@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
-  // Ensure static files are served correctly
+  // Removed standalone mode for Render compatibility
   trailingSlash: false,
 };
 
