@@ -1,66 +1,140 @@
 <!-- Hero Section -->
-<section class="hero-section bg-primary text-white py-5">
+<section class="hero-section">
     <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0">
-                <h1 class="display-4 fw-bold mb-4">Hello, I'm <span class="text-warning">Allen Pandey</span></h1>
-                <p class="lead mb-4">
-                    A passionate developer with expertise in building modern web applications 
-                    using Node.js, Express, and cloud technologies.
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <p class="text-gradient mb-3 fw-bold" style="font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">
+                    <i class="bi bi-code-slash me-2"></i>Full-Stack Developer
                 </p>
-                <p class="mb-4">
-                    Welcome to my portfolio! I specialize in creating scalable, maintainable, and 
-                    user-friendly applications. Explore my work, learn about my experience, and 
-                    feel free to reach out.
+                <h1 class="hero-title">
+                    Hello, I'm<br>
+                    <span class="text-gradient">Allen Pandey</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Crafting exceptional digital experiences with modern technologies. 
+                    I build scalable, high-performance web applications that make a difference.
                 </p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                    <a href="/about" class="btn btn-light btn-lg">
-                        <i class="bi bi-person me-2"></i>Learn More About Me
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="/projects" class="btn btn-modern btn-primary-modern">
+                        <i class="bi bi-rocket-takeoff me-2"></i>View My Work
                     </a>
-                    <a href="/projects" class="btn btn-outline-light btn-lg">
-                        <i class="bi bi-folder me-2"></i>View My Projects
-                    </a>
-                    <a href="/contact" class="btn btn-warning btn-lg">
+                    <a href="/contact" class="btn btn-modern btn-outline-modern">
                         <i class="bi bi-envelope me-2"></i>Get In Touch
                     </a>
                 </div>
+                <div class="d-flex gap-4 mt-4">
+                    <div>
+                        <div class="text-gradient fw-bold" style="font-size: 1.5rem;">50+</div>
+                        <div class="text-muted small">Projects</div>
+                    </div>
+                    <div>
+                        <div class="text-gradient fw-bold" style="font-size: 1.5rem;">5+</div>
+                        <div class="text-muted small">Years Experience</div>
+                    </div>
+                    <div>
+                        <div class="text-gradient fw-bold" style="font-size: 1.5rem;">100%</div>
+                        <div class="text-muted small">Dedication</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-6 text-center">
-                <!-- Photo Placeholder -->
-                <div class="profile-photo-container mx-auto">
-                    <img src="https://via.placeholder.com/400x400/0d6efd/ffffff?text=Allen+Pandey" 
-                         alt="Allen Pandey" 
-                         class="img-fluid rounded-circle shadow-lg"
-                         style="max-width: 400px; width: 100%; border: 8px solid rgba(255,255,255,0.2);">
+            <div class="col-lg-6 hero-image-container mt-5 mt-lg-0">
+                <div class="hero-image-wrapper">
+                    <img src="/images/profile-hero.jpg" alt="Allen Pandey - Full-Stack Developer" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Quick Stats Section -->
-<section class="py-5 bg-light">
+<!-- Stats Section -->
+<section class="stats-section">
     <div class="container">
-        <div class="row text-center g-4">
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card fade-in">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services/Expertise Section -->
+<section class="py-5" style="background: var(--dark);">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What I Do</h2>
+            <p class="section-subtitle">Transforming ideas into powerful digital solutions</p>
+        </div>
+        <div class="row g-4">
             <div class="col-md-4">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="bi bi-code-square text-primary" style="font-size: 3rem;"></i>
-                    <h3 class="mt-3 mb-2">Full-Stack Developer</h3>
-                    <p class="text-muted">Building end-to-end web solutions</p>
+                <div class="glass-card h-100 fade-in">
+                    <div class="mb-3">
+                        <i class="bi bi-laptop text-gradient" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="mb-3">Frontend Development</h4>
+                    <p class="text-muted">
+                        Creating stunning, responsive user interfaces with modern frameworks 
+                        and cutting-edge design principles.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>React & Vue.js</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Responsive Design</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Modern UI/UX</li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="bi bi-cloud text-primary" style="font-size: 3rem;"></i>
-                    <h3 class="mt-3 mb-2">Cloud Enthusiast</h3>
-                    <p class="text-muted">Experienced with Azure and AWS</p>
+                <div class="glass-card h-100 fade-in">
+                    <div class="mb-3">
+                        <i class="bi bi-server text-gradient" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="mb-3">Backend Development</h4>
+                    <p class="text-muted">
+                        Building robust, scalable server-side applications with Node.js, 
+                        Express, and cloud technologies.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Node.js & Express</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>RESTful APIs</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Database Design</li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="p-4 bg-white rounded shadow-sm">
-                    <i class="bi bi-graph-up text-primary" style="font-size: 3rem;"></i>
-                    <h3 class="mt-3 mb-2">Problem Solver</h3>
-                    <p class="text-muted">Turning complex ideas into reality</p>
+                <div class="glass-card h-100 fade-in">
+                    <div class="mb-3">
+                        <i class="bi bi-cloud text-gradient" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="mb-3">Cloud Solutions</h4>
+                    <p class="text-muted">
+                        Deploying and managing applications on AWS, Azure, and modern 
+                        cloud platforms for optimal performance.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>AWS & Azure</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>DevOps & CI/CD</li>
+                        <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Docker & Kubernetes</li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
-<!-- Page Header -->
-<section class="bg-primary text-white py-5 mt-5">
+<!-- Hero Header -->
+<section class="py-5" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(131, 56, 236, 0.1) 100%); margin-top: 80px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-3">About Me</h1>
-                <p class="lead">Learn about my background, education, and skills</p>
+                <h1 class="display-3 fw-bold mb-3">About Me</h1>
+                <p class="lead text-muted">Passionate developer dedicated to building exceptional digital experiences</p>
             </div>
         </div>
     </div>
@@ -15,21 +15,36 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <div class="card border-0 shadow-sm mb-5">
-                    <div class="card-body p-4">
-                        <h2 class="card-title mb-4">
-                            <i class="bi bi-info-circle text-primary me-2"></i>Biography
-                        </h2>
-                        <p class="card-text lead">
-                            I'm a dedicated software developer with a passion for creating innovative solutions 
-                            using modern technologies. With expertise in Node.js and web development, I build scalable web 
-                            applications that solve real-world problems.
-                        </p>
-                        <p class="card-text">
-                            My journey in software development has been driven by curiosity and a commitment to 
-                            continuous learning. I enjoy tackling complex challenges and transforming ideas into 
-                            functional, user-friendly applications.
-                        </p>
+                <div class="glass-card fade-in">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <div class="hero-image-wrapper" style="max-width: 300px; margin: 0 auto;">
+                                <img src="/images/profile-hero.jpg" alt="Allen Pandey" class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="text-gradient mb-4">
+                                <i class="bi bi-person-circle me-2"></i>Who I Am
+                            </h2>
+                            <p class="lead mb-4" style="color: var(--gray-light);">
+                                I'm a dedicated full-stack developer with a passion for creating innovative 
+                                solutions using modern technologies. With expertise in Node.js, Express, and 
+                                cloud computing, I build scalable web applications that solve real-world problems.
+                            </p>
+                            <p class="mb-4" style="color: var(--gray-light);">
+                                My journey in software development has been driven by curiosity and a commitment 
+                                to continuous learning. I enjoy tackling complex challenges and transforming ideas 
+                                into functional, user-friendly applications that make a difference.
+                            </p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="/projects" class="btn btn-modern btn-primary-modern btn-sm">
+                                    View My Work
+                                </a>
+                                <a href="/contact" class="btn btn-modern btn-outline-modern btn-sm">
+                                    Get In Touch
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,41 +53,47 @@
 </section>
 
 <!-- Education Section -->
-<section class="py-5 bg-light">
+<section class="py-5" style="background: var(--dark-light);">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="mb-4">
-                    <i class="bi bi-mortarboard text-primary me-2"></i>Education
-                </h2>
-                <div class="card border-0 shadow-sm mb-3">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h4 class="card-title mb-1">Bachelor of Science in Computer Science</h4>
-                                <h6 class="text-muted mb-2">University Name</h6>
-                            </div>
-                            <span class="badge bg-primary">2018 - 2022</span>
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-mortarboard me-2"></i>Education
+            </h2>
+            <p class="section-subtitle">My academic background and certifications</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card fade-in h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="mb-2">Bachelor of Science in Computer Science</h4>
+                            <p class="text-muted mb-0">University Name</p>
                         </div>
-                        <p class="card-text text-muted mb-0">
-                            Focused on software engineering, algorithms, and database systems. 
-                            Completed projects in web development and cloud computing.
-                        </p>
+                        <span class="badge bg-gradient-primary" style="padding: 0.5rem 1rem; font-weight: 600;">
+                            2018 - 2022
+                        </span>
                     </div>
+                    <p class="text-muted mb-0">
+                        Focused on software engineering, algorithms, and database systems. 
+                        Completed projects in web development and cloud computing.
+                    </p>
                 </div>
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h4 class="card-title mb-1">AWS Certified Developer</h4>
-                                <h6 class="text-muted mb-2">Amazon Web Services</h6>
-                            </div>
-                            <span class="badge bg-primary">2023</span>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card fade-in h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h4 class="mb-2">AWS Certified Developer</h4>
+                            <p class="text-muted mb-0">Amazon Web Services</p>
                         </div>
-                        <p class="card-text text-muted mb-0">
-                            Certified in developing cloud solutions using Node.js, AWS services, and serverless architecture.
-                        </p>
+                        <span class="badge bg-gradient-primary" style="padding: 0.5rem 1rem; font-weight: 600;">
+                            2023
+                        </span>
                     </div>
+                    <p class="text-muted mb-0">
+                        Certified in developing cloud solutions using Node.js, AWS services, 
+                        and serverless architecture.
+                    </p>
                 </div>
             </div>
         </div>
@@ -82,60 +103,66 @@
 <!-- Experience Section -->
 <section class="py-5">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="mb-4">
-                    <i class="bi bi-briefcase text-primary me-2"></i>Experience
-                </h2>
-                <div class="card border-0 shadow-sm mb-3">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h4 class="card-title mb-1">Senior Software Developer</h4>
-                                <h6 class="text-muted mb-2">Tech Company Inc.</h6>
-                            </div>
-                            <span class="badge bg-primary">2022 - Present</span>
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-briefcase me-2"></i>Experience
+            </h2>
+            <p class="section-subtitle">My professional journey</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-12">
+                <div class="glass-card fade-in">
+                    <div class="d-flex justify-content-between align-items-start mb-3 flex-wrap">
+                        <div class="mb-3 mb-md-0">
+                            <h4 class="mb-2">Senior Software Developer</h4>
+                            <p class="text-muted mb-0">Tech Company Inc.</p>
                         </div>
-                        <ul class="card-text mb-0">
-                            <li>Developed and maintained Node.js and Express applications</li>
-                            <li>Designed and implemented RESTful APIs</li>
-                            <li>Collaborated with cross-functional teams to deliver high-quality software</li>
-                            <li>Mentored junior developers and conducted code reviews</li>
-                        </ul>
+                        <span class="badge bg-gradient-primary" style="padding: 0.5rem 1rem; font-weight: 600;">
+                            2022 - Present
+                        </span>
                     </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Developed and maintained Node.js and Express applications</li>
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Designed and implemented RESTful APIs</li>
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Collaborated with cross-functional teams to deliver high-quality software</li>
+                        <li class="mb-0"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Mentored junior developers and conducted code reviews</li>
+                    </ul>
                 </div>
-                <div class="card border-0 shadow-sm mb-3">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h4 class="card-title mb-1">Software Developer</h4>
-                                <h6 class="text-muted mb-2">Startup Solutions Ltd.</h6>
-                            </div>
-                            <span class="badge bg-primary">2020 - 2022</span>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card fade-in h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3 flex-wrap">
+                        <div class="mb-3 mb-md-0">
+                            <h4 class="mb-2">Software Developer</h4>
+                            <p class="text-muted mb-0">Startup Solutions Ltd.</p>
                         </div>
-                        <ul class="card-text mb-0">
-                            <li>Built responsive web applications using Node.js, Express, and Bootstrap</li>
-                            <li>Implemented database solutions using MongoDB and PostgreSQL</li>
-                            <li>Integrated third-party APIs and payment gateways</li>
-                            <li>Participated in agile development processes</li>
-                        </ul>
+                        <span class="badge bg-gradient-primary" style="padding: 0.5rem 1rem; font-weight: 600;">
+                            2020 - 2022
+                        </span>
                     </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Built responsive web applications</li>
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Implemented database solutions</li>
+                        <li class="mb-0"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Integrated third-party APIs</li>
+                    </ul>
                 </div>
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <div>
-                                <h4 class="card-title mb-1">Junior Developer (Internship)</h4>
-                                <h6 class="text-muted mb-2">Software Services Co.</h6>
-                            </div>
-                            <span class="badge bg-primary">2019 - 2020</span>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card fade-in h-100">
+                    <div class="d-flex justify-content-between align-items-start mb-3 flex-wrap">
+                        <div class="mb-3 mb-md-0">
+                            <h4 class="mb-2">Junior Developer (Internship)</h4>
+                            <p class="text-muted mb-0">Software Services Co.</p>
                         </div>
-                        <ul class="card-text mb-0">
-                            <li>Assisted in developing web applications using JavaScript and Node.js</li>
-                            <li>Wrote unit tests and performed debugging</li>
-                            <li>Learned best practices in software development</li>
-                        </ul>
+                        <span class="badge bg-gradient-primary" style="padding: 0.5rem 1rem; font-weight: 600;">
+                            2019 - 2020
+                        </span>
                     </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Assisted in developing web applications</li>
+                        <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Wrote unit tests and performed debugging</li>
+                        <li class="mb-0"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Learned best practices</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -143,78 +170,125 @@
 </section>
 
 <!-- Skills Section -->
-<section class="py-5 bg-light">
+<section class="py-5" style="background: var(--dark-light);">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2 class="mb-4">
-                    <i class="bi bi-tools text-primary me-2"></i>Skills
-                </h2>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body p-4">
-                                <h5 class="card-title mb-3">
-                                    <i class="bi bi-code-slash text-primary me-2"></i>Programming Languages
-                                </h5>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-primary p-2">JavaScript</span>
-                                    <span class="badge bg-primary p-2">TypeScript</span>
-                                    <span class="badge bg-primary p-2">Node.js</span>
-                                    <span class="badge bg-primary p-2">Python</span>
-                                    <span class="badge bg-primary p-2">HTML5</span>
-                                    <span class="badge bg-primary p-2">CSS3</span>
-                                </div>
-                            </div>
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="bi bi-tools me-2"></i>Skills & Technologies
+            </h2>
+            <p class="section-subtitle">My technical expertise and proficiency</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="glass-card fade-in">
+                    <h5 class="mb-4">
+                        <i class="bi bi-code-slash text-gradient me-2"></i>Programming Languages
+                    </h5>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript / TypeScript</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body p-4">
-                                <h5 class="card-title mb-3">
-                                    <i class="bi bi-layers text-primary me-2"></i>Frameworks & Technologies
-                                </h5>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-success p-2">Express.js</span>
-                                    <span class="badge bg-success p-2">React</span>
-                                    <span class="badge bg-success p-2">Vue.js</span>
-                                    <span class="badge bg-success p-2">Bootstrap 5</span>
-                                    <span class="badge bg-success p-2">jQuery</span>
-                                    <span class="badge bg-success p-2">Socket.io</span>
-                                </div>
-                            </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body p-4">
-                                <h5 class="card-title mb-3">
-                                    <i class="bi bi-database text-primary me-2"></i>Databases
-                                </h5>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-info p-2">MongoDB</span>
-                                    <span class="badge bg-info p-2">PostgreSQL</span>
-                                    <span class="badge bg-info p-2">MySQL</span>
-                                    <span class="badge bg-info p-2">Redis</span>
-                                </div>
-                            </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body p-4">
-                                <h5 class="card-title mb-3">
-                                    <i class="bi bi-cloud text-primary me-2"></i>Cloud & Tools
-                                </h5>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="badge bg-warning text-dark p-2">AWS</span>
-                                    <span class="badge bg-warning text-dark p-2">Azure</span>
-                                    <span class="badge bg-warning text-dark p-2">Docker</span>
-                                    <span class="badge bg-warning text-dark p-2">Git</span>
-                                    <span class="badge bg-warning text-dark p-2">CI/CD</span>
-                                </div>
-                            </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML5 / CSS3</span>
+                            <span>95%</span>
                         </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="glass-card fade-in">
+                    <h5 class="mb-4">
+                        <i class="bi bi-layers text-gradient me-2"></i>Frameworks & Tools
+                    </h5>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Express.js</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MongoDB / PostgreSQL</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>AWS / Azure</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 82%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Technology Tags -->
+        <div class="row g-4 mt-2">
+            <div class="col-12">
+                <div class="glass-card fade-in">
+                    <h5 class="mb-4 text-center">
+                        <i class="bi bi-stack text-gradient me-2"></i>Technologies I Work With
+                    </h5>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">JavaScript</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">TypeScript</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Node.js</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Express.js</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">React</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Vue.js</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">MongoDB</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">PostgreSQL</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">AWS</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Azure</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Docker</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Git</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Bootstrap 5</span>
+                        <span class="project-tag" style="font-size: 1rem; padding: 0.5rem 1rem;">Socket.io</span>
                     </div>
                 </div>
             </div>

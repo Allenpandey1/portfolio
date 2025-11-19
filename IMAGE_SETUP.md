@@ -24,20 +24,32 @@ Your portfolio is designed to use a hero image on the homepage and about page. F
 
 ### Step 3: Verify
 
-1. The image should appear on:
-   - **Homepage** - Hero section (right side)
-   - **About page** - Biography section
+1. The image will appear in **4 strategic locations**:
+   - **Navigation Bar** - Small circular profile picture next to your name (top left)
+   - **Homepage Hero Section** - Large featured image (right side) with 3D effects
+   - **About Page Header** - Circular profile picture above the "About Me" title
+   - **About Page Biography** - Large image in the biography card section
 
 ### Alternative: Use a Different Filename
 
 If you want to use a different filename, update these files:
 
-1. **Views/Home/index.ejs** (around line 32):
+1. **Views/layout.ejs** (navbar - around line 28):
+   ```html
+   <img src="/images/YOUR-IMAGE-NAME.jpg" alt="Allen Pandey" class="navbar-profile-img">
+   ```
+
+2. **Views/Home/index.ejs** (hero section - around line 42):
    ```html
    <img src="/images/YOUR-IMAGE-NAME.jpg" alt="Allen Pandey">
    ```
 
-2. **Views/About/index.ejs** (around line 17):
+3. **Views/About/index.ejs** (header - around line 7):
+   ```html
+   <img src="/images/YOUR-IMAGE-NAME.jpg" alt="Allen Pandey" class="about-header-img">
+   ```
+
+4. **Views/About/index.ejs** (biography - around line 25):
    ```html
    <img src="/images/YOUR-IMAGE-NAME.jpg" alt="Allen Pandey">
    ```
@@ -57,7 +69,31 @@ If you want to use a different filename, update these files:
 ⚠️ **Action needed:** Add your image file to `public/images/profile-hero.jpg`
 
 Once you add the image, it will automatically appear with:
-- Modern 3D transform effects on hover
+
+**Navigation Bar:**
+- Small circular avatar (40px)
+- Glowing border effect
+- Smooth hover animation
+- Scales down when navbar scrolls
+
+**Homepage Hero:**
+- Large featured image with 3D transform effects
 - Gradient overlays
+- Parallax effect on scroll
+- Smooth hover animations
+
+**About Page Header:**
+- Circular profile picture (120px)
+- Glowing border with gradient colors
+- Hover scale effect
+
+**About Page Biography:**
+- Large image with rounded corners
+- Glassmorphism card styling
 - Responsive design
-- Smooth animations
+
+All images feature:
+- ✅ Responsive design (mobile-friendly)
+- ✅ Smooth animations and transitions
+- ✅ Modern styling with glassmorphism effects
+- ✅ Automatic fallback (hides gracefully if image not found)
