@@ -6,15 +6,16 @@ import { Download, FileText } from 'lucide-react';
 const Resume = () => {
   const handleDownload = () => {
     // Open resume page in new window for printing/saving as PDF
-    window.open('/resume', '_blank');
+    const printWindow = window.open('/resume', '_blank');
     
-    // Also try to download the PDF if it exists
-    const link = document.createElement('a');
-    link.href = '/Allen_Pandey_Resume.pdf';
-    link.download = 'Allen_Pandey_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Wait for page to load, then trigger print dialog
+    if (printWindow) {
+      printWindow.onload = () => {
+        setTimeout(() => {
+          printWindow.print();
+        }, 500);
+      };
+    }
   };
 
   const resumeData = {

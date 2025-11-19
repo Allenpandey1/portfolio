@@ -3,11 +3,26 @@ export default function ResumePage() {
     <div className="min-h-screen bg-white p-8 md:p-12 max-w-4xl mx-auto print:p-4">
       <style jsx global>{`
         @media print {
+          @page {
+            margin: 0.5in;
+            size: letter;
+          }
           body {
             background: white;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
           }
           .no-print {
             display: none;
+          }
+          * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+        }
+        @media screen {
+          body {
+            background: #f5f5f5;
           }
         }
       `}</style>
