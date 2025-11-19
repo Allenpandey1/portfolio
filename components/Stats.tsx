@@ -107,11 +107,11 @@ const Stats = () => {
   };
 
   return (
-    <section className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#f0f7ff] via-[#e8f4ff] to-[#f0f7ff] relative overflow-hidden">
+    <section className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a] relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-[#00d4ff]/20 rounded-full blur-3xl"
+          className="absolute top-0 left-1/4 w-96 h-96 bg-[#00d4ff]/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -124,7 +124,7 @@ const Stats = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8338ec]/20 rounded-full blur-3xl"
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8338ec]/10 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -165,12 +165,12 @@ const Stats = () => {
           >
             <TrendingUp className="w-8 h-8 text-[#00d4ff] mx-auto" />
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
-            <span className="bg-gradient-to-r from-[#1a1a1a] via-[#00d4ff] to-[#8338ec] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <span className="bg-gradient-to-r from-white via-[#00d4ff] to-[#8338ec] bg-clip-text text-transparent">
               By The Numbers
             </span>
           </h2>
-          <p className="text-lg text-[#4a5568] max-w-2xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             A snapshot of my journey in tech and development
           </p>
         </motion.div>
@@ -191,7 +191,7 @@ const Stats = () => {
                 whileHover={{ y: -8, scale: 1.05 }}
                 className="group relative"
               >
-                <div className="bg-white/80 backdrop-blur-sm rounded-2xl border-2 border-[#e2e8f0] p-8 text-center hover:border-[#00d4ff]/50 hover:shadow-2xl hover:shadow-[#00d4ff]/20 transition-all duration-300 h-full">
+                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 text-center hover:border-[#00d4ff]/50 hover:shadow-2xl hover:shadow-[#00d4ff]/20 transition-all duration-300 h-full">
                   {/* Glow effect on hover */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00d4ff]/0 to-[#8338ec]/0 group-hover:from-[#00d4ff]/10 group-hover:to-[#8338ec]/10 transition-all duration-300 -z-10 blur-xl" />
                   
@@ -207,10 +207,10 @@ const Stats = () => {
                     <Counter end={stat.value} suffix={stat.suffix} />
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 group-hover:text-[#00d4ff] transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#00d4ff] transition-colors">
                     {stat.label}
                   </h3>
-                  <p className="text-sm text-[#4a5568]">{stat.description}</p>
+                  <p className="text-sm text-gray-400">{stat.description}</p>
                 </div>
               </motion.div>
             );

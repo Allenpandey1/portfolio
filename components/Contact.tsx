@@ -67,7 +67,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fafbfc] via-[#f0f7ff] to-[#fafbfc] relative overflow-hidden">
+    <section id="contact" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fef3f7] via-white to-[#f0f9ff] relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (

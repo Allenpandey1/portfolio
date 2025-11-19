@@ -66,7 +66,7 @@ const Achievements = () => {
   };
 
   return (
-    <section className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fafbfc] via-[#f0f7ff] to-[#fafbfc] relative overflow-hidden">
+    <section className="py-section px-6 lg:px-8 bg-gradient-to-br from-white via-[#f8faff] to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-96 h-96 bg-[#00d4ff] rounded-full blur-3xl"></div>

@@ -50,7 +50,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fefefe] via-[#f8f9fa] to-[#fefefe] relative overflow-hidden">
+    <section id="experience" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#f0fdfe] via-white to-[#f8faff] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 right-10 w-96 h-96 bg-[#00d4ff] rounded-full blur-3xl"></div>

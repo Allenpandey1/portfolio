@@ -90,7 +90,7 @@ const Resume = () => {
   };
 
   return (
-    <section id="resume" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fefefe] via-[#f8f9fa] to-[#fefefe]">
+    <section id="resume" className="py-section px-6 lg:px-8 bg-[#fafafa]">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
