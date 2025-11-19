@@ -11,6 +11,9 @@ const contactValidation = [
         .trim()
         .isEmail().withMessage('Invalid email address')
         .normalizeEmail(),
+    body('subject')
+        .trim()
+        .notEmpty().withMessage('Subject is required'),
     body('message')
         .trim()
         .isLength({ min: 10 }).withMessage('Message must be at least 10 characters')
