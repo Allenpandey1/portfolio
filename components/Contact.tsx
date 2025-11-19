@@ -67,8 +67,35 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fef3f7] via-white to-[#f0f9ff]">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#fef3f7] via-white to-[#f0f9ff] relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-gradient-to-r from-[#00d4ff]/10 to-[#8338ec]/10"
+            style={{
+              width: Math.random() * 80 + 40,
+              height: Math.random() * 80 + 40,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              x: [0, Math.random() * 15 - 7.5, 0],
+              opacity: [0.1, 0.3, 0.1],
+            }}
+            transition={{
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +103,11 @@ const Contact = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">Get In Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
+            <span className="bg-gradient-to-r from-[#1a1a1a] via-[#00d4ff] to-[#8338ec] bg-clip-text text-transparent">
+              Get In Touch
+            </span>
+          </h2>
           <p className="text-lg text-[#718096] max-w-xl mx-auto">
             Feel free to reach out if you&apos;d like to collaborate or have any questions.
           </p>
@@ -98,14 +129,24 @@ const Contact = () => {
                 target={contact.href.startsWith('http') ? '_blank' : undefined}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 variants={itemVariants}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="bg-white rounded-xl border border-[#e2e8f0] p-6 text-center hover:shadow-md hover:border-[#00d4ff]/30 transition-all duration-300 group"
+                whileHover={{ y: -8, scale: 1.05, rotate: [0, -2, 2, 0] }}
+                className="bg-white rounded-xl border-2 border-[#e2e8f0] p-6 text-center hover:shadow-2xl hover:shadow-[#00d4ff]/20 hover:border-[#00d4ff]/50 transition-all duration-300 group relative overflow-hidden"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#00d4ff]/10 to-[#8338ec]/10 flex items-center justify-center group-hover:from-[#00d4ff]/20 group-hover:to-[#8338ec]/20 transition-all">
-                  <Icon className="w-6 h-6 text-[#00d4ff]" />
-                </div>
-                <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2">{contact.label}</h3>
-                <p className="text-base text-[#718096]">{contact.value}</p>
+                {/* Hover gradient background */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-[#00d4ff]/5 to-[#8338ec]/5 opacity-0 group-hover:opacity-100 transition-opacity"
+                  initial={false}
+                />
+                
+                <motion.div
+                  className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-[#00d4ff] to-[#8338ec] flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Icon className="w-7 h-7 text-white" />
+                </motion.div>
+                <h3 className="text-lg font-semibold text-[#1a1a1a] mb-2 group-hover:text-[#00d4ff] transition-colors relative z-10">{contact.label}</h3>
+                <p className="text-base text-[#718096] group-hover:text-[#4a5568] transition-colors relative z-10">{contact.value}</p>
               </motion.a>
             );
           })}

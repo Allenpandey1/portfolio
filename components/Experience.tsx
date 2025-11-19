@@ -50,8 +50,14 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-section px-6 lg:px-8 bg-[#f0fdfe]">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-section px-6 lg:px-8 bg-gradient-to-br from-[#f0fdfe] via-white to-[#f8faff] relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 right-10 w-96 h-96 bg-[#00d4ff] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#8338ec] rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +65,11 @@ const Experience = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
+            <span className="bg-gradient-to-r from-[#1a1a1a] via-[#00d4ff] to-[#8338ec] bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
           <p className="text-lg text-[#718096]">My professional journey</p>
         </motion.div>
 
@@ -74,22 +84,32 @@ const Experience = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white rounded-xl border border-[#e2e8f0] p-6 shadow-sm hover:shadow-md transition-all duration-300"
+              whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3 } }}
+              className="bg-white rounded-xl border-2 border-[#e2e8f0] p-6 md:p-8 shadow-md hover:shadow-2xl hover:shadow-[#00d4ff]/20 hover:border-[#00d4ff]/50 transition-all duration-300 relative overflow-hidden group"
             >
+              {/* Gradient accent */}
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#00d4ff] to-[#8338ec] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">{exp.title}</h3>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2 group-hover:text-[#00d4ff] transition-colors">{exp.title}</h3>
                   <p className="text-lg text-[#00d4ff] font-medium">{exp.company}</p>
                 </div>
-                <span className="text-base text-[#718096] font-medium mt-2 md:mt-0">{exp.period}</span>
+                <span className="text-base text-[#718096] font-medium mt-2 md:mt-0 bg-[#f7fafc] px-3 py-1 rounded-lg">{exp.period}</span>
               </div>
               <ul className="space-y-3">
                 {exp.points.map((point, idx) => (
-                  <li key={idx} className="text-base text-[#4a5568] flex items-start leading-relaxed">
-                    <span className="text-[#00d4ff] mr-2 mt-1">▸</span>
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="text-base text-[#4a5568] flex items-start leading-relaxed"
+                  >
+                    <span className="text-[#00d4ff] mr-3 mt-1 text-lg font-bold">▸</span>
                     <span>{point}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </motion.div>
