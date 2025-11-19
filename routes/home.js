@@ -42,10 +42,17 @@ const featuredProjects = [
 
 // Home page
 router.get('/', (req, res) => {
+    const successMessage = req.query.success === 'true' 
+        ? 'Thank you for your message! I\'ll get back to you soon.' 
+        : null;
+    
     res.render('Home/index', {
         title: 'Allen Pandey - Computer Science Student & Full-Stack Developer',
         page: 'home',
-        featuredProjects: featuredProjects
+        featuredProjects: featuredProjects,
+        errors: null,
+        formData: {},
+        successMessage: successMessage
     });
 });
 

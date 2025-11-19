@@ -19,19 +19,9 @@ const contactValidation = [
         .isLength({ min: 10 }).withMessage('Message must be at least 10 characters')
 ];
 
-// GET contact page
+// GET contact page - redirect to home with anchor
 router.get('/', (req, res) => {
-    const successMessage = req.query.success === 'true' 
-        ? 'Thank you for your message! I\'ll get back to you soon.' 
-        : null;
-    
-    res.render('Contact/index', {
-        title: 'Contact - Allen Pandey',
-        page: 'contact',
-        successMessage: successMessage,
-        errors: null,
-        formData: {}
-    });
+    res.redirect('/#contact');
 });
 
 // POST contact form
@@ -39,10 +29,10 @@ router.post('/', contactValidation, (req, res) => {
     const errors = validationResult(req);
     
     if (!errors.isEmpty()) {
-        // Return form with errors
-        return res.render('Contact/index', {
-            title: 'Contact - Allen Pandey',
-            page: 'contact',
+        // Return home page with form errors
+        return res.render('Home/index', {
+            title: 'Allen Pandey - Computer Science Student & Full-Stack Developer',
+            page: 'home',
             successMessage: null,
             errors: errors.array(),
             formData: req.body
@@ -55,8 +45,8 @@ router.post('/', contactValidation, (req, res) => {
     
     console.log(`Contact form submitted by ${name} (${email}): ${message}`);
     
-    // Redirect with success message
-    res.redirect('/contact?success=true');
+    // Redirect to home with success message and anchor to contact section
+    res.redirect('/?success=true#contact');
 });
 
 module.exports = router;

@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-// About page
+// About page - redirect to home with anchor
 router.get('/', (req, res) => {
-    res.render('About/index', {
-        title: 'About - Allen Pandey',
-        page: 'about'
-    });
+    res.redirect('/#about');
 });
 
 module.exports = router;

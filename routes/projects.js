@@ -50,13 +50,9 @@ const projects = [
     }
 ];
 
-// Projects page
+// Projects page - redirect to home with anchor
 router.get('/', (req, res) => {
-    res.render('Projects/index', {
-        title: 'Projects - Allen Pandey',
-        page: 'projects',
-        projects: projects
-    });
+    res.redirect('/#projects');
 });
 
 module.exports = router;
