@@ -1,0 +1,73 @@
+ALLEN PANDEY
+Computer Science Student & Full-Stack Developer
+Arlington, Texas | Open to Internship & Full-Time Opportunities
+
+SUMMARY
+Computer Science student at The University of Texas at Arlington with expertise in full-stack development. Proficient in Python, TypeScript, React, and Next.js. Passionate about building scalable web applications and solving complex problems with modern technologies. Seeking internship and full-time opportunities to contribute to impactful products and grow as a developer.
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+The University of Texas at Arlington (UTA)
+Arlington, Texas
+Expected Graduation: May 2027
+
+Relevant Coursework:
+- Data Structures & Algorithms
+- Database Systems
+- Software Engineering
+- Web Development
+- Operating Systems
+- Computer Networks
+- Object-Oriented Design
+- Systems Programming
+
+Associate in Science
+Dallas College
+Dallas, Texas
+2022 - 2024
+
+TECHNICAL SKILLS
+
+Programming Languages
+Python, JavaScript / TypeScript, C, SQL, HTML / CSS
+
+Frameworks & Libraries
+React, Next.js, Node.js, Express.js, Tailwind CSS, Expo / React Native
+
+Databases & Tools
+PostgreSQL, MongoDB, Git & GitHub, Docker, REST API Design
+
+Cloud & Deployment
+Vercel, Netlify, Render, AWS (Basics), CI/CD
+
+EXPERIENCE
+
+Software Developer — AccessAid Project
+Capstone Project
+2024 - Present
+
+• Implemented OCR-based text recognition
+• Added dark mode and accessibility settings
+• Built API integration to read text from camera and uploaded images
+• Improved navigation and UI flow
+
+Computer Science Student
+University of North Texas (UNT)
+2024 - Present
+
+• Coursework: Systems Programming, Assembly (CSE 2312), Linear Programming, Technical Communication
+• Experience with C, Python, React, Next.js, Linux development
+
+PROJECTS
+
+AccessAid
+Accessibility-focused mobile app built using React Native and AI. Includes OCR, text reader, dark mode, and API pipeline to read text from camera images and uploaded files.
+
+Technologies: React Native, Expo, TypeScript, OCR API, Flask
+
+CONTACT
+Email: allenpandeyofficial@gmail.com
+GitHub: https://github.com/Allenpandey1
+LinkedIn: Connect with me
+
