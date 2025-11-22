@@ -19,7 +19,7 @@ const Projects = () => {
       description: 'A modern, responsive web application for tracking stock market news and stock prices. Features breaking news ticker, real-time stock search, interactive 15-day price charts, and dark mode support. Built with React, Vite, Tailwind CSS, and Chart.js.',
       tech: ['React', 'Vite', 'Tailwind CSS', 'Chart.js', 'Axios', 'React Router'],
       github: 'https://github.com/Allenpandey1/stock-market-news',
-      demo: 'https://stock-market-news.onrender.com',
+      demo: 'https://stock-market-news-0ou4.onrender.com',
     },
     {
       id: 3,
