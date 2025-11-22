@@ -1,3 +1,7 @@
+'use client';
+
+import React from 'react';
+
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-white p-8 md:p-12 max-w-4xl mx-auto print:p-4">
