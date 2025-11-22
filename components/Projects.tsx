@@ -15,11 +15,11 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Coming Soon',
-      description: 'New project coming soon.',
-      tech: ['TBD'],
-      github: '#',
-      demo: '#',
+      title: 'Stock Market News Channel',
+      description: 'A modern, responsive web application for tracking stock market news and stock prices. Features breaking news ticker, real-time stock search, interactive 15-day price charts, and dark mode support. Built with React, Vite, Tailwind CSS, and Chart.js.',
+      tech: ['React', 'Vite', 'Tailwind CSS', 'Chart.js', 'Axios', 'React Router'],
+      github: 'https://github.com/Allenpandey1/stock-market-news',
+      demo: 'https://stock-market-news.onrender.com',
     },
     {
       id: 3,
@@ -130,6 +130,23 @@ const Projects = () => {
                     >
                       <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </motion.div>
+                  ) : project.title === 'Stock Market News Channel' ? (
+                    <motion.div
+                      animate={{ 
+                        scale: [1, 1.1, 1],
+                        rotate: [0, -5, 5, 0]
+                      }}
+                      transition={{ 
+                        duration: 4, 
+                        repeat: Infinity, 
+                        ease: "easeInOut" 
+                      }}
+                      className="w-24 h-24 rounded-2xl bg-white/25 backdrop-blur-md border-2 border-white/40 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform"
+                    >
+                      <svg className="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                       </svg>
                     </motion.div>
                   ) : (
